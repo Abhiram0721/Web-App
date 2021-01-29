@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, request, jsonify, render_template, flash, redirect, url_for
 from werkzeug.utils import secure_filename
 import os, shutil
@@ -7,21 +8,17 @@ import keras
 from tensorflow.keras.preprocessing.image import load_img 
 from tensorflow.keras.applications.xception import preprocess_input
 
+common_path = "./"
 
-
-
-UPLOAD_FOLDER = "/static/image"
+UPLOAD_FOLDER = common_path+"img"
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder= common_path+"templates", static_folder=common_path+"static")
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-run_with_ngrok(app)
-
-
-model = keras.models.load_model('model1.h5')
+model = keras.models.load_model(common_path+'model1.h5')
 
 
 def allowed_file(filename):
@@ -62,8 +59,8 @@ def homeUp():
   labels = {0:'dress', 1:'hat', 2:'longsleeve', 3:'outwear', 4:'jeans',
            5:'shirt', 6:'shoes', 7:'shorts',  8:'skirt', 9:'t-shirt'}
 
-  image = (os.listdir("/static/image"))
-  img = load_img("/static/image/" + image[0], target_size=(image_size))
+  image = (os.listdir(common_path+"img"))
+  img = load_img(common_path+"img/" + image[0], target_size=(image_size))
   x = np.array(img)
   X = np.array([x])
   X = preprocess_input(X)
@@ -116,10 +113,6 @@ def senti():
   return render_template("result.html",prediction=prediction)
 
     
-
-
-
-
 if __name__ == "__main__":
   app.secret_key = 'super secret key'
   app.config['SESSION_TYPE'] = 'filesystem'
