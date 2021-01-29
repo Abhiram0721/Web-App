@@ -1,0 +1,221 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css"> 
+	
+	</head>
+	
+	<body> 
+
+		<div class="menu">
+
+			<a href="index.html">Comfy Store</a>
+	  
+			<div class="menu-log"> 
+				<a>
+					<svg onclick="pop()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+				</a>
+			</div> 
+		</div>
+
+		<div id="menu_pop" class="c_grid">
+			
+			<div class="padding popp">
+
+				<svg onclick="back()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M576 64H205.26A63.97 63.97 0 0 0 160 82.75L9.37 233.37c-12.5 12.5-12.5 32.76 0 45.25L160 429.25c12 12 28.28 18.75 45.25 18.75H576c35.35 0 64-28.65 64-64V128c0-35.35-28.65-64-64-64zm-84.69 254.06c6.25 6.25 6.25 16.38 0 22.63l-22.62 22.62c-6.25 6.25-16.38 6.25-22.63 0L384 301.25l-62.06 62.06c-6.25 6.25-16.38 6.25-22.63 0l-22.62-22.62c-6.25-6.25-6.25-16.38 0-22.63L338.75 256l-62.06-62.06c-6.25-6.25-6.25-16.38 0-22.63l22.62-22.62c6.25-6.25 16.38-6.25 22.63 0L384 210.75l62.06-62.06c6.25-6.25 16.38-6.25 22.63 0l22.62 22.62c6.25 6.25 6.25 16.38 0 22.63L429.25 256l62.06 62.06z"></path></svg>
+
+
+				<form action="/result" method="POST" enctype = "multipart/form-data"> 
+					
+					<div class="file-upload">
+						
+						<div class="file-select">
+						  <div class="file-select-button">Upload Image</div>
+						  <!-- <div class="file-select-name" id="noFile">No file chosen...</div>  -->
+						  <input required type="file" id="img" name="img">
+						</div>
+						<br>
+						<input style="padding: 1vmax; font-size: 1.4vmax; cursor:pointer; border:1px solid black" type="Submit">
+					</div>
+					
+				</form>
+
+			</div>
+	
+		</div>
+	
+	
+	
+	
+		<div class="top_box c_grid" style="height: 30vh;">
+			
+			<div class="c_grid box2">
+				
+				<!-- <div class="padding white_t">
+					<h1 class="let_space"> Let's Start Learning</h1>
+					
+					<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate iure officiis quia possimus quaerat commodi reprehenderit labore? Non, facere aut doloribus a dolores molestiae est, suscipit doloremque rerum, hic inventore dignissimos nostrum! Voluptates alias corrupti nobis eveniet ipsum omnis error officia dolores, magni est quas exercitationem sed sunt totam ducimus nisi dolorum facere fugiat earum in ratione deserunt. </p>
+				</div> -->
+				
+			</div>
+			
+		</div>
+
+
+		<div class="grid padding">
+
+			<h2 class="let_space tb_margin">{{prediction}}</h2>
+			<br>
+			<br>
+
+			<div class="c_grid box4">
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/1.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Esprit {{prediction}}</a></p>
+					<p>$16.64</p>
+				</div>	
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/2.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Converse All Star Hi Plimsolls</a></p>
+					<p>$26.41</p>
+				</div>	
+
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/3.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Herschel {{prediction}}</a></p>
+					<p>$96.47</p>
+				</div>	
+
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/4.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Nike Black Classic</a></p>
+					<p>$26.61</p>
+				</div>	
+
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/5.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Classic Trench {{prediction}}</a></p>
+					<p>$56.40</p>
+				</div>	
+
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/6.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Herschel supply {{prediction}}</a></p>
+					<p>$29.66</p>
+				</div>	
+
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/7.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Nike Jordan</a></p>
+					<p>$87.35</p>
+				</div>	
+
+
+				<div class="prod">
+					<div class="product">
+						<a href="">
+							<img src="/static/image/{{prediction}}/8.jpg" alt="image"/>
+						</a>
+					</div>
+	
+					<p class="gray_t"><a href="">Esprit Ruffle {{prediction}}</a></p>
+					<p>$35.43</p>
+				</div>	
+	
+			</div>
+
+		</div>
+
+		
+		<div class="c_review padding c_grid">
+			<h2 class="let_space tb_margin">Your Feedbacks Are Valuable:</h2>
+
+			<form action="/senti" method="POST" >
+				<input required type="text" placeholder="Feedback"> 
+				<input style="padding: 1vmax; font-size: 1.4vmax; cursor:pointer;border:1px solid black" type="Submit">
+			</form>
+		</div>
+
+		<br>
+		<br>
+
+
+		<div class="footer c_grid padding">
+
+			<div class="c_grid cons-box3">
+	
+				<div class="social">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 512">
+						<path  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+					</svg>
+				</div>
+	
+				<div class="social">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 512">
+						<path  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+					</svg>
+				</div>
+		
+				<div class="social">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 512">
+						<path  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+					</svg>
+				</div>
+				
+			</div>
+	
+			<div class="white_t let_space" style="font-size: 1.5vmax; font-weight: 100;">
+				<p class="heading center">contact us</p>
+				<p class="center">vokation.upskil@gmail.com</p>
+			</div>
+		   
+			<p class="gray_t heading center" style="word-spacing:3px">Copyright Ã‚Â©2021 All rights reserved | This template is made with by <a href="vokatio.in">ABHI</a></p>
+	
+		</div>
+
+		<script src="/static/js/index.js"></script>
+	</body> 
+</html> 
