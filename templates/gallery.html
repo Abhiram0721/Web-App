@@ -1,0 +1,21 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		
+	
+	</head>
+	
+	<body> 
+	    
+		
+		<section class="row">
+  {% for image in images %}
+    <section class="col-md-4 col-sm-6" style="background-color: green;">
+      <img src="{{ url_for('static', filename='capture_image/' + image) }}">
+    </section>
+  {% endfor %}
+</section>
+
+	</body> 
+</html> 
