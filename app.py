@@ -7,6 +7,8 @@ import numpy as np
 import keras
 from tensorflow.keras.preprocessing.image import load_img 
 from tensorflow.keras.applications.xception import preprocess_input
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
 
 
 UPLOAD_FOLDER = "static/img"
@@ -19,9 +21,13 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 
-model = keras.models.load_model('model1.h5')
+model = load_model('model1.h5')
 reader = easyocr.Reader(["en"])
 
+#try:
+ #   reader = easyocr.Reader(['en'])
+#except:
+#	pass
 
 def allowed_file(filename):
     return '.' in filename and \
